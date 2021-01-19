@@ -1,2 +1,6 @@
-import { jewelery } from './data.js';
+import { jewelry } from './data.js';
+import { renderJewelry } from './renderJewelry.js';
+
+
+
 

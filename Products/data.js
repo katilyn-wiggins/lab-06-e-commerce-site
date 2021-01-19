@@ -1,4 +1,4 @@
-export const jewelery = [
+export const jewelry = [
     {
         id: 1,
         name: 'ember',
