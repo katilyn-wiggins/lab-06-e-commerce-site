@@ -116,12 +116,14 @@ img {
 
 .jewelry-item {
     border: 2px rgb(161, 161, 161) dotted;
-    margin: 0px;
     width: 205px;
-    margin-bottom: 15px;
-    margin-top: 30px;
+    margin: 30px 3px 15px 3px;
     background-color: rgba(224, 217, 217, 0.5);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+
 }
 
 .jewelry-name {
@@ -138,6 +140,7 @@ img {
     text-align: center;  
     font-weight: 400;  
     align-content: flex-start;
+    margin: 0px 3px 0px 3px;
 }
 
 button {

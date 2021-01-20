@@ -2,7 +2,7 @@ export const jewelry = [
     {
         id: 1,
         name: 'ember',
-        description: 'hand chiseled antique japanese teacup piece set in sterling silver',
+        description: 'antique teacup piece set in .925 silver, silver chain included',
         price: 60,
         image: 'j.png',
         size: 'small',
@@ -12,7 +12,7 @@ export const jewelry = [
     {
         id: 2,
         name: 'imelda',
-        description: 'hand chiseled antique english teacup piece set in sterling silver',
+        description: 'antique teacup piece set in .925 silver, silver chain included',
         price: 60,
         image: 'y.png',
         size: 'small',
@@ -22,17 +22,17 @@ export const jewelry = [
     {
         id: 3,
         name: 'constantine',
-        description: 'turquoise set in sterling silver',
+        description: 'turquoise set in sterling silver on silver band',
         price: 75,
         image: 't.png',
-        size: 'small',
+        size: '7.5',
         weight: '8 grams',
         stone: 'turquise',
     },
     {
         id: 4,
         name: 'mary',
-        description: 'antique english teacup peice set in silver',
+        description: 'antique teacup peice set in .925 silver, silver chain included',
         price: 60,
         image: 'f.png',
         size: 'small',
@@ -42,7 +42,7 @@ export const jewelry = [
     {
         id: 5,
         name: 'esther',
-        description: 'hand chiseled antique english teacup piece set in sterling silver',
+        description: 'antique teacup piece set in .925 silver, silver chain included',
         price: 60,
         image: 'p.png',
         size: 'small',
@@ -52,7 +52,7 @@ export const jewelry = [
     {
         id: 6,
         name: 'dianna',
-        description: 'antique english teacup peice set in silver',
+        description: 'antique teacup peice set in .925 silver, silver chain included',
         price: 60,
         image: 'e.png',
         size: 'small',
