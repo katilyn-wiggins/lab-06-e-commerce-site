@@ -57,6 +57,6 @@ export const jewelry = [
         image: 'e.png',
         size: 'small',
         weight: '3 grams',
-        stone: 'turquise',
+        stone: 'porcelain',
     }
 ];
