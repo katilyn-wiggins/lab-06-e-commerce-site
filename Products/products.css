@@ -57,6 +57,7 @@ header {
     box-shadow: gray;
     font-weight: 900;
     font-size: 50px;
+    letter-spacing: 1em;
 }
 
 footer {
@@ -69,7 +70,8 @@ footer {
 
 h2 {
     font-size: 1.8rem;
-    font-weight: bold;
+    font-weight: normal;
+    letter-spacing: 2px;
 }
 
 .gutter-right {
@@ -120,8 +122,14 @@ img {
     margin-top: 30px;
     background-color: rgba(224, 217, 217, 0.5);
     text-align: center;
+}
 
-
+.jewelry-name {
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 2px;
+    margin-bottom: 5px; 
+    text-align: center;
 }
 
 .jewelry-description {
@@ -132,9 +140,8 @@ img {
     align-content: flex-start;
 }
 
-h3 {
-    font-weight: 400;
-    text-align: center;
+button {
+    
 }
 
 
