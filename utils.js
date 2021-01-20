@@ -1,4 +1,3 @@
-
 export function findByID(id, array) {
 
     for (let item of array) {
@@ -9,4 +8,10 @@ export function findByID(id, array) {
 
         }
     }
-} 
+}
+
+export function calcItemTotal(quantity, price) {
+    let mathFunction = (quantity * price);
+
+    return mathFunction;
+}

@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 import { renderJewelry } from '../Products/renderJewelry.js';
-import { findByID } from '../cart/findByID.js';
+import { findByID, calcItemTotal } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -30,8 +30,9 @@ test('should take in a jewelry item and return an li', (expect) => {
 });
 
 
-test('the function findByID should take in an id and an array and return an item', (expect) => {
+test('the function findByID should take in a quantity and a price and return a product of the two', (expect) => {
     //Arrange
+
     const pieceOne = [{
         id: 1,
         name: 'ember',
@@ -42,6 +43,7 @@ test('the function findByID should take in an id and an array and return an item
         weight: '3 grams',
         stone: 'turquise',
     }];
+
     // Set up your arguments and expectations
     const expected = {
         id: 1,
@@ -62,3 +64,35 @@ test('the function findByID should take in an id and an array and return an item
     // Make assertions about what is expected versus the actual result
     expect.deepEqual(actual, expected);
 });
+
+test('the function calcItemTotal should take in a quantity and a price and return a product of the two', (expect) => {
+    //Arrange
+    const shoppingCart =
+    {
+        id: 1,
+        quantity: 4,
+    };
+
+    const pieceOne = {
+        id: 1,
+        name: 'ember',
+        description: 'hand chiseled antique japanese teacup piece set in sterling silver',
+        price: 60,
+        image: 'j.png',
+        size: 'small',
+        weight: '3 grams',
+        stone: 'turquise',
+    };
+
+    let quantity = shoppingCart.quantity;
+    let price = pieceOne.price;
+    // Set up your arguments and expectations
+    const expected = 240;
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = calcItemTotal(quantity, price);
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);
+});
+
