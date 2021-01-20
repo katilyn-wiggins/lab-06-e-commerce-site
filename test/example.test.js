@@ -1,6 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 import { renderJewelry } from '../Products/renderJewelry.js';
+import { findByID } from '../cart/findByID.js';
 
 const test = QUnit.test;
 
@@ -26,4 +27,38 @@ test('should take in a jewelry item and return an li', (expect) => {
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual.outerHTML, expected);
+});
+
+
+test('the function findByID should take in an id and an array and return an item', (expect) => {
+    //Arrange
+    const pieceOne = [{
+        id: 1,
+        name: 'ember',
+        description: 'hand chiseled antique japanese teacup piece set in sterling silver',
+        price: 60,
+        image: 'j.png',
+        size: 'small',
+        weight: '3 grams',
+        stone: 'turquise',
+    }];
+    // Set up your arguments and expectations
+    const expected = {
+        id: 1,
+        name: 'ember',
+        description: 'hand chiseled antique japanese teacup piece set in sterling silver',
+        price: 60,
+        image: 'j.png',
+        size: 'small',
+        weight: '3 grams',
+        stone: 'turquise',
+    };
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = findByID(1, pieceOne);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);
 });
