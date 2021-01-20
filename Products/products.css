@@ -143,38 +143,9 @@ img {
     margin: 0px 3px 0px 3px;
 }
 
-button {
-    
-}
 
 
 
 
 
 
-
-/* Unused */
-
-
-  /* @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
-    }
-
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
-
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
-
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
-
-  } */
-
-  /* .main-logo {
-    animation: pulse 5s infinite ease-in-out;
-} */
