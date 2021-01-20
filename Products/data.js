@@ -4,10 +4,9 @@ export const jewelry = [
         name: 'ember',
         description: 'hand chiseled antique japanese teacup piece set in sterling silver',
         price: 60,
-        image: '../assets/',
+        image: 'j.png',
         size: 'small',
         weight: '3 grams',
-        cost: 60,
         stone: 'turquise',
     },
     {
@@ -15,10 +14,9 @@ export const jewelry = [
         name: 'imelda',
         description: 'hand chiseled antique english teacup piece set in sterling silver',
         price: 60,
-        image: '../assets/',
+        image: 'y.png',
         size: 'small',
         weight: '3 grams',
-        cost: 60,
         stone: 'turquise',
     },
     {
@@ -26,10 +24,9 @@ export const jewelry = [
         name: 'constantine',
         description: 'turquoise set in sterling silver',
         price: 60,
-        image: '../assets/',
+        image: 'r.png',
         size: 'small',
         weight: '3 grams',
-        cost: 60,
         stone: 'turquise',
     },
     {
@@ -37,10 +34,9 @@ export const jewelry = [
         name: 'ember',
         description: 'hand chiseled antique japanese teacup piece set in sterling silver',
         price: 60,
-        image: '../assets/',
+        image: 'f.png',
         size: 'small',
         weight: '3 grams',
-        cost: 60,
         stone: 'turquise',
     },
     {
@@ -51,7 +47,6 @@ export const jewelry = [
         image: '../assets/',
         size: 'small',
         weight: '3 grams',
-        cost: 60,
         stone: 'turquise',
     },
     {
@@ -62,7 +57,6 @@ export const jewelry = [
         image: '../assets/',
         size: 'small',
         weight: '3 grams',
-        cost: 60,
         stone: 'turquise',
     }
 ];

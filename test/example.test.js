@@ -1,18 +1,29 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
+import { renderJewelry } from '../Products/renderJewelry.js';
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
+test('should take in a jewelry item and return an li', (expect) => {
     //Arrange
+    const pieceOne = {
+        id: 1,
+        name: 'ember',
+        description: 'hand chiseled antique japanese teacup piece set in sterling silver',
+        price: 60,
+        image: 'j.png',
+        size: 'small',
+        weight: '3 grams',
+        stone: 'turquise',
+    };
     // Set up your arguments and expectations
-    const expected = true;
-    
+    const expected = `<li class="jewelry-item"><h3 class="jewelry-name">ember</h3><img class="jewelery-image" src="../assets/j.png"><p class="jewelry-description">hand chiseled antique japanese teacup piece set in sterling silver</p><p class="jewelry-price">$60</p><p class="jewelry-size">small</p><p class="jewelry-weight">3 grams</p><p class="jewelry-stone">turquise</p><button>add to cart</button></li>`;
+
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = false;
+    const actual = renderJewelry(pieceOne);
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+    expect.equal(actual.outerHTML, expected);
 });
