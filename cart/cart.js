@@ -1,24 +1,26 @@
 import { jewelry } from '../Products/data.js';
 import { cart } from './cart-data.js';
 
-import { findByID } from '../utils.js';
+import { findByID, calcItemTotal } from '../utils.js';
 import { renderCart } from './render-cart-items.js';
 
 const table = document.querySelector('table');
 
 let total = 0;
 
+
 for (let item of cart) {
 
     const jewels = findByID(item.id, jewelry);
 
-    // let amount = item.amount;
+    let amount = item.amount;
 
-    // const totalForThisItem = calcItemTotal(amount, jewels);
+    const totalForThisItem = calcItemTotal(amount, jewels.price);
 
-    // total = total + totalForThisItem;
+    total = total + totalForThisItem;
 
-    const tableRow = renderCart(cart, jewels);
+    const tableRow = renderCart(item, jewels);
+
 
     table.append(tableRow);
 }

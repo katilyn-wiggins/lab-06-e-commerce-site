@@ -2,6 +2,8 @@ import { calcItemTotal } from '../utils.js';
 
 export function renderCart(cart, jewelry) {
 
+    let quantity = cart.amount;
+
     const tableRow = document.createElement('tr');
     tableRow.classList.add('table-row');
 
@@ -11,11 +13,11 @@ export function renderCart(cart, jewelry) {
 
     const itemQuantity = document.createElement('td');
     itemQuantity.classList.add('item-quantity');
-    itemQuantity.textContent = cart.amount;
+    itemQuantity.textContent = quantity;
 
-    // const itemTotalPrice = document.createElement('td');
-    // itemTotalPrice.classList.add('item-total-price');
-    // itemTotalPrice.textContent = calcItemTotal(cart.amount, jewelry.price);
+    const itemTotalPrice = document.createElement('td');
+    itemTotalPrice.classList.add('item-total-price');
+    itemTotalPrice.textContent = calcItemTotal(quantity, jewelry.price);
 
     tableRow.append(itemName, itemQuantity, itemTotalPrice);
     return tableRow;

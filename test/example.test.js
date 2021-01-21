@@ -99,13 +99,13 @@ test('the function calcItemTotal should take in a quantity and a price and retur
 
 test('the function renderCartItems should take in an object and display it as a table row', (expect) => {
     //Arrange
-    const shoppingCart =
+    const cart =
     {
         id: 1,
-        quantity: 4,
+        amount: 4,
     };
 
-    const pieceOne = {
+    const jewelry = {
         id: 1,
         name: 'ember',
         description: 'hand chiseled antique japanese teacup piece set in sterling silver',
@@ -120,7 +120,7 @@ test('the function renderCartItems should take in an object and display it as a 
     const expected = '<tr class=\"table-row\"><td class=\"item-name\">ember</td><td class=\"item-quantity\">4</td><td class=\"item-total-price\">240</td></tr>';
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = renderCart(shoppingCart, pieceOne);
+    const actual = renderCart(cart, jewelry);
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual.outerHTML, expected);
