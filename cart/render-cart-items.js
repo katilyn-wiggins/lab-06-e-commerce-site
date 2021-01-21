@@ -2,7 +2,6 @@ import { calcItemTotal } from '../utils.js';
 
 export function renderCart(cart, jewelry) {
 
-
     const tableRow = document.createElement('tr');
     tableRow.classList.add('table-row');
 
@@ -13,8 +12,6 @@ export function renderCart(cart, jewelry) {
     const itemQuantity = document.createElement('td');
     itemQuantity.classList.add('item-quantity');
     itemQuantity.textContent = cart.amount;
-
-    // shoppingCart.quantity
 
     const itemTotalPrice = document.createElement('td');
     itemTotalPrice.classList.add('item-total-price');

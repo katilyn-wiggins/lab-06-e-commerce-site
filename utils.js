@@ -8,8 +8,6 @@ export function findByID(id, array) {
     }
 }
 
-export function calcItemTotal(quantity, price) {
-    let mathFunction = (quantity * price);
-
-    return mathFunction;
+export function calcItemTotal(price, amount) {
+    return price * amount;
 }
