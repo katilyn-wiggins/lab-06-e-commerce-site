@@ -13,9 +13,9 @@ export function renderCart(cart, jewelry) {
     itemQuantity.classList.add('item-quantity');
     itemQuantity.textContent = cart.amount;
 
-    const itemTotalPrice = document.createElement('td');
-    itemTotalPrice.classList.add('item-total-price');
-    itemTotalPrice.textContent = calcItemTotal(cart.amount, jewelry.price);
+    // const itemTotalPrice = document.createElement('td');
+    // itemTotalPrice.classList.add('item-total-price');
+    // itemTotalPrice.textContent = calcItemTotal(cart.amount, jewelry.price);
 
     tableRow.append(itemName, itemQuantity, itemTotalPrice);
     return tableRow;
