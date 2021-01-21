@@ -117,7 +117,7 @@ test('the function renderCartItems should take in an object and display it as a 
     };
 
     // Set up your arguments and expectations
-    const expected = '<tr class=\"table-row\"><td class=\"item-name\">ember</td><td class=\"item-quantity\">4</td><td class=\"item-total-price\">240</td></tr>';
+    const expected = '<tr class=\"table-row\"><td class=\"item-name\">ember</td><td class=\"item-quantity\">4</td><td class=\"item-total-price\">$240</td></tr>';
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = renderCart(cart, jewelry);

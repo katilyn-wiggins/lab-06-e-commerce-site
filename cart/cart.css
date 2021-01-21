@@ -47,6 +47,16 @@ header {
     margin: 0 auto;
 }
 
+header img {
+    position: absolute;
+    top: 23px;
+    right: 32px;
+    width: auto;
+    height: auto;
+    max-width: 25px;
+    max-height: 25px;
+}
+
 footer {
     display: flex;
     justify-content: flex-end;
@@ -61,14 +71,6 @@ h2 {
     letter-spacing: 2px;
     text-align: center;
     
-}
-
-
-
-
-
-header img {
-    height: var(--header-height);
 }
 
 content {
@@ -106,4 +108,8 @@ td {
 button {
     font-family: serif;
 
+}
+
+h1 {
+    text-align: center !important;
 }
