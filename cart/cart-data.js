@@ -1,18 +1,18 @@
-export const shoppingCart = [
+export const cart = [
     {
         id: 1,
-        quantity: 4,
+        amount: 1
     },
     {
-        id: 5,
-        quantity: 6,
+        id: 2,
+        amount: 3
     },
     {
         id: 3,
-        quantity: 1,
+        amount: 1
     },
     {
-        id: 6,
-        quantity: 2,
+        id: 4,
+        amount: 2,
     }
 ];

@@ -2,10 +2,8 @@ export function findByID(id, array) {
 
     for (let item of array) {
 
-        if (array.id === id); {
-
+        if (item.id === id) {
             return item;
-
         }
     }
 }
