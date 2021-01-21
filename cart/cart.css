@@ -32,7 +32,7 @@ section {
     justify-content: center;
     align-items: center;
     border: solid 2px var(--color1);
-    margin: 0 auto;
+    margin-right: 30px;
 }
 
 header {
@@ -95,6 +95,7 @@ table {
     font-size: 20px;
     width: 40%;
     height: auto;
+    margin-bottom: 10px;
 }
 
 th {
