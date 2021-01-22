@@ -1,10 +1,19 @@
+import { clearCart, getCart } from '../cart-utils.js';
 import { jewelry } from '../Products/data.js';
-import { cart } from './cart-data.js';
+const stringyCart = localStorage.getItem('CART');
+const cart = JSON.parse(stringyCart);
+const button = document.getElementById('p-button');
+const homeButton = document.getElementById('home');
+
 
 import { findByID, calcItemTotal } from '../utils.js';
 import { renderCart } from './render-cart-items.js';
 
 const table = document.querySelector('table');
+
+if (!cart[0]) {
+    button.disabled = true;
+}
 
 let total = 0;
 
@@ -13,9 +22,9 @@ for (let item of cart) {
 
     const jewels = findByID(item.id, jewelry);
 
-    let amount = item.amount;
+    let quantity = item.quantity;
 
-    const totalForThisItem = calcItemTotal(amount, jewels.price);
+    const totalForThisItem = calcItemTotal(quantity, jewels.price);
 
     total = total + totalForThisItem;
 
@@ -35,4 +44,23 @@ td3.textContent = `Order total: $${total}`;
 
 tr.append(td1, td2, td3);
 
-table.append(tr); 
+table.append(tr);
+
+
+
+button.addEventListener('click', () => {
+
+    alert(JSON.stringify(cart, true, 2));
+
+    clearCart(cart);
+
+    button.disabled = true;
+});
+
+homeButton.addEventListener('click', () => {
+    window.location.replace('../index.html');
+
+});
+
+
+

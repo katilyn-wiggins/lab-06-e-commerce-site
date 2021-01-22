@@ -1,3 +1,5 @@
+import { addToCart } from '../cart-utils.js';
+
 export function renderJewelry(jewelry) {
 
     const productList = document.createElement('li');
@@ -39,6 +41,10 @@ export function renderJewelry(jewelry) {
     productList.append(pStone);
 
     const button = document.createElement('button');
+    button.addEventListener('click', () => {
+        addToCart(jewelry.id);
+    });
+
     button.textContent = 'add to cart';
     productList.append(button);
 

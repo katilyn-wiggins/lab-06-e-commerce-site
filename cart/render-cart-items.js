@@ -2,7 +2,7 @@ import { calcItemTotal } from '../utils.js';
 
 export function renderCart(cart, jewelry) {
 
-    let quantity = cart.amount;
+    let quantity = cart.quantity;
 
     const tableRow = document.createElement('tr');
     tableRow.classList.add('table-row');

@@ -1,6 +1,6 @@
 const CART = 'CART';
 const defaultEmptyCart = [];
-import { findByID } from '../utils.js';
+import { findByID } from './utils.js';
 
 
 //displays to user what is currently in their cart 
@@ -30,18 +30,17 @@ export function clearCart() {
 }
 
 
-//putting item into cart (from cart on computer to cart in local storage)
+//stringifying your cart - putting item into cart (from cart on computer to cart in local storage)
 export function setCart(cart) {
-    const startACart = JSON.stringify(cart);
+    const transformCart = JSON.stringify(cart);
 
-    localStorage.setItem(CART, startACart);
+    localStorage.setItem(CART, transformCart);
 }
 
 
 //adds to an existing cart
 export function addToCart(id) {
-    const cart = getCart;
-
+    const cart = getCart();
     //determines if the new item matches an item that is already in the cart     
     const cartItem = findByID(id, cart);
 
