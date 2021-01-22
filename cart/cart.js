@@ -52,7 +52,7 @@ button.addEventListener('click', () => {
 
     alert(JSON.stringify(cart, true, 2));
 
-    clearCart(cart);
+    clearCart();
 
     button.disabled = true;
 });
