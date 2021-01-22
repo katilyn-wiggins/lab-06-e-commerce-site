@@ -1,5 +1,6 @@
 import { addToCart } from '../cart-utils.js';
 
+
 export function renderJewelry(jewelry) {
 
     const productList = document.createElement('li');
@@ -40,13 +41,25 @@ export function renderJewelry(jewelry) {
     pStone.textContent = jewelry.stone;
     productList.append(pStone);
 
+    const dropDown = document.createElement('select');
+    for (let index = 0; index < 6; index++) {
+        const option = document.createElement('option');
+        option.text = index;
+        option.value = index;
+        dropDown.appendChild(option);
+    }
+    productList.append(dropDown);
+
+
     const button = document.createElement('button');
     button.addEventListener('click', () => {
-        addToCart(jewelry.id);
+        const quantity = dropDown.value;
+        console.log(quantity);
+        addToCart(jewelry.id, quantity);
     });
 
     button.textContent = 'add to cart';
     productList.append(button);
-
     return productList;
 }
+

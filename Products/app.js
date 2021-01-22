@@ -9,3 +9,5 @@ for (let jewel of jewelry) {
     list.append(jewelryItem);
 }
 
+
+
