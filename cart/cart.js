@@ -1,4 +1,4 @@
-import { clearCart, getCart } from '../cart-utils.js';
+import { clearCart } from '../cart-utils.js';
 import { jewelry } from '../Products/data.js';
 const stringyCart = localStorage.getItem('CART');
 const cart = JSON.parse(stringyCart);

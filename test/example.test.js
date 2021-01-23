@@ -20,6 +20,7 @@ test('the function renderJewelry should take in a jewelry item and return an li'
         stone: 'turquise',
     };
     // Set up your arguments and expectations
+    /* eslint-disable */
     const expected = `<li class=\"jewelry-item\"><h3 class=\"jewelry-name\">ember</h3><img class=\"jewelery-image\" src=\"../assets/j.png\"><p class=\"jewelry-description\">hand chiseled antique japanese teacup piece set in sterling silver</p><p class=\"jewelry-price\">$60</p><p class=\"jewelry-size\">small</p><p class=\"jewelry-weight\">3 grams</p><p class=\"jewelry-stone\">turquise</p><select><option value=\"0\">0</option><option value=\"1\">1</option><option value=\"2\">2</option><option value=\"3\">3</option><option value=\"4\">4</option><option value=\"5\">5</option></select><button>add to cart</button></li>`;
 
     //Act 
