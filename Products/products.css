@@ -1,0 +1,139 @@
+
+body {
+    --header-height: 80px;
+    --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
+    --gutter: 30px;
+    --footer-height: 25px;
+    
+    font-family: serif;
+    background-color: whitesmoke;
+    
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc(var(--footer-height));
+    background-image: url('../assets/productBackground.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+section {
+    background-color: var(--color5);
+    width: 1000px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+    margin-top: var(--gutter);
+    margin-bottom: var(--gutter);
+    border: solid 2px var(--color1);
+}
+
+header {
+    text-align: center;
+    display: grid;
+    background-color: whitesmoke;
+    height: var(--header-height);
+    box-shadow: gray;
+    font-weight: 900;
+    font-size: 50px;
+    letter-spacing: 1em;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--color3);
+    box-shadow: var(--shadow);
+}
+
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-align: center;
+    
+}
+
+
+header img {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    height: 20px;
+    width: 20px;
+}
+
+content {
+    width: 80%;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: var(--footer-height);
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--color3);
+    box-shadow: var(--shadow);
+}
+
+
+
+ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    margin: 0px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+} 
+
+.jewelry-item {
+    border: 2px rgb(161, 161, 161) dotted;
+    width: 205px;
+    margin: 30px 3px 15px 3px;
+    background-color: rgba(224, 217, 217, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+
+}
+
+.jewelry-name {
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 2px;
+    margin-bottom: 5px; 
+    text-align: center;
+}
+
+.jewelry-description {
+    display: flex;
+    text-overflow: clip;
+    text-align: center;  
+    font-weight: 400;  
+    align-content: flex-start;
+    margin: 0px 3px 0px 3px;
+}
+
+
+
+
