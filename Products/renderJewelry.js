@@ -54,7 +54,6 @@ export function renderJewelry(jewelry) {
     const button = document.createElement('button');
     button.addEventListener('click', () => {
         const quantity = dropDown.value;
-        console.log(quantity);
         addToCart(jewelry.id, quantity);
     });
 
