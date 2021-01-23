@@ -1,13 +1,13 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 import { renderJewelry } from '../Products/renderJewelry.js';
-import { findByID, calcItemTotal } from '../utils.js';
+import { findByID, calcItemTotal, calcTotalOrder } from '../utils.js';
 import { renderCart } from '../cart/render-cart-items.js';
 import { getCart, clearCart, setCart } from '../cart-utils.js';
 
 const test = QUnit.test;
 
-test('should take in a jewelry item and return an li', (expect) => {
+test('the function renderJewelry should take in a jewelry item and return an li', (expect) => {
     //Arrange
     const pieceOne = {
         id: 1,
@@ -97,6 +97,43 @@ test('the function calcItemTotal should take in a quantity and a price and retur
     // Make assertions about what is expected versus the actual result
     expect.deepEqual(actual, expected);
 });
+
+test('the function calcOrderTotal should add all individual item totals in the cart and return a total order sum', (expect) => {
+    //Arrange
+    const cart = [
+        {
+            id: 1,
+            quantity: 4,
+        },
+        {
+            id: 2,
+            quantity: 2,
+        }
+    ];
+
+    const jewelry = [
+        {
+            id: 1,
+            price: 60,
+        },
+        {
+            id: 2,
+            price: 30,
+        }
+    ];
+
+    // Set up your arguments and expectations
+    const expected = 300;
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = calcTotalOrder(cart, jewelry);
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);
+});
+
+
+
 
 test('the function renderCartItems should take in an object and display it as a table row', (expect) => {
     //Arrange

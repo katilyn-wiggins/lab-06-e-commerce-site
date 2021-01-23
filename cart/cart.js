@@ -6,16 +6,16 @@ const button = document.getElementById('p-button');
 const homeButton = document.getElementById('home');
 
 
-import { findByID, calcItemTotal } from '../utils.js';
+import { findByID, calcItemTotal, calcTotalOrder } from '../utils.js';
 import { renderCart } from './render-cart-items.js';
 
 const table = document.querySelector('table');
+const orderTotal = calcTotalOrder(cart, jewelry);
 
 if (!cart[0]) {
     button.disabled = true;
 }
 
-let total = 0;
 
 
 for (let item of cart) {
@@ -24,15 +24,15 @@ for (let item of cart) {
 
     let quantity = item.quantity;
 
-    const totalForThisItem = calcItemTotal(quantity, jewels.price);
+    calcItemTotal(quantity, jewels.price);
 
-    total = total + totalForThisItem;
+    orderTotal;
 
     const tableRow = renderCart(item, jewels);
 
-
     table.append(tableRow);
 }
+
 
 
 const tr = document.createElement('tr');
@@ -40,7 +40,7 @@ const td1 = document.createElement('td');
 const td2 = document.createElement('td');
 const td3 = document.createElement('td');
 
-td3.textContent = `Order total: $${total}`;
+td3.textContent = `Order total: $${orderTotal}`;
 
 tr.append(td1, td2, td3);
 
