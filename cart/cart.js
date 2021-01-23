@@ -1,7 +1,8 @@
-import { clearCart } from '../cart-utils.js';
+import { clearCart, getCart, setCart } from '../cart-utils.js';
 import { jewelry } from '../Products/data.js';
-const stringyCart = localStorage.getItem('CART');
-const cart = JSON.parse(stringyCart);
+// const stringyCart = localStorage.getItem('CART');
+// const cart = JSON.parse(stringyCart);
+
 const button = document.getElementById('p-button');
 const homeButton = document.getElementById('home');
 
@@ -9,8 +10,12 @@ const homeButton = document.getElementById('home');
 import { findByID, calcItemTotal, calcTotalOrder } from '../utils.js';
 import { renderCart } from './render-cart-items.js';
 
+
+const cart = getCart();
 const table = document.querySelector('table');
 const orderTotal = calcTotalOrder(cart, jewelry);
+
+
 
 if (!cart[0]) {
     button.disabled = true;

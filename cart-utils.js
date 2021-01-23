@@ -3,6 +3,7 @@ const defaultEmptyCart = [];
 import { findByID } from './utils.js';
 
 
+
 //displays to user what is currently in their cart 
 
 export function getCart() {
